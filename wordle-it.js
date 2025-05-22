@@ -1443,17 +1443,17 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
                                       switch (e) {
                                           case Ia:
                                               a = function(e) {
-                                                  return e ? "ðŸŸ§" : "ðŸŸ©"
+                                                  return e ? "🟩" : "🟩"
                                               }(i);
                                               break;
                                           case Ta:
                                               a = function(e) {
-                                                  return e ? "ðŸŸ¦" : "ðŸŸ¨"
+                                                  return e ? "🟧" : "🟧"
                                               }(i);
                                               break;
                                           case Ca:
                                               a = function(e) {
-                                                  return e ? "â¬›" : "â¬œ"
+                                                  return e ? "⬛" : "⬛"
                                               }(n)
                                       }
                                       d += a
