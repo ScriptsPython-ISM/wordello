@@ -939,7 +939,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
       }]), t
   }(c(HTMLElement));
   customElements.define("game-toast", Ea);
-  var Aa = ["abito", "acqua", "aereo", "aiuta", "bagno", "banca", "bello", "birra", "carne", "citt�", "collo", "corpo", "corto", "cuoco", "cuore", "danno", "darte", "della", "denti", "detto", "dieta", "esame", "fanno", "fatto", "felpa", "ferie", "forma", "forno", "fuoco", "gente", "gioco", "guida", "heshe", "larte", "laula", "leale", "letto", "libro", "liceo", "lungo", "luovo", "magro", "manzo", "marca", "mezzi", "miele", "morti", "museo", "nella", "nonna", "nonni", "nonno", "occhi", "paese", "parco", "parla", "pazzo", "pelle", "pesce", "piace", "piede", "piedi", "pigro", "pista", "pollo", "polso", "ponte", "porto", "posso", "preso", "russo", "sarei", "scemo", "sedia", "senso", "sento", "serie", "spero", "stata", "stato", "succo", "tanta", "tante", "tende", "tetto", "torre", "tosse", "trama", "treno", "unico", "vasca", "witch", "zaino"],
+  var Aa = ["abito", "acqua", "aereo", "aiuta", "bagno", "banca", "bello", "birra", "carne", "città", "collo", "corpo", "corto", "cuoco", "cuore", "danno", "darte", "della", "denti", "detto", "dieta", "esame", "fanno", "fatto", "felpa", "ferie", "forma", "forno", "fuoco", "gente", "gioco", "guida", "heshe", "larte", "laula", "leale", "letto", "libro", "liceo", "lungo", "luovo", "magro", "manzo", "marca", "mezzi", "miele", "morti", "museo", "nella", "nonna", "nonni", "nonno", "occhi", "paese", "parco", "parla", "pazzo", "pelle", "pesce", "piace", "piede", "piedi", "pigro", "pista", "pollo", "polso", "ponte", "porto", "posso", "preso", "russo", "sarei", "scemo", "sedia", "senso", "sento", "serie", "spero", "stata", "stato", "succo", "tanta", "tante", "tende", "tetto", "torre", "tosse", "trama", "treno", "unico", "vasca", "witch", "zaino"],
       La = [],
       Ta = "present",
       Ia = "correct",
@@ -1044,7 +1044,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
   var Qa = "IN_PROGRESS",
       Za = "WIN",
       es = "FAIL",
-      as = ["Genio!!!", "Magnifico", "Notevole", "Ottimo", "Non male", "Daje!"],
+      as = ["Genius", "Magnificent", "Impressive", "Splendid", "Great", "Phew"],
       ss = function(e) {
           n(t, e);
           var a = h(t);
@@ -1203,7 +1203,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
                   }
                   this.$game.addEventListener("game-key-press", (function(a) {
                       var s = a.detail.key;
-                      "←" === s || "Backspace" === s ? e.removeLetter() : "↵" === s || "Enter" === s ? e.submitGuess() : Ga.includes(s.toLowerCase()) && e.addLetter(s.toLowerCase())
+                      "â" === s || "Backspace" === s ? e.removeLetter() : "âµ" === s || "Enter" === s ? e.submitGuess() : Ga.includes(s.toLowerCase()) && e.addLetter(s.toLowerCase())
                   })), this.$game.addEventListener("game-last-tile-revealed-in-row", (function(a) {
                       e.$keyboard.letterEvaluations = e.letterEvaluations, e.rowIndex < 6 && (e.canInput = !0);
                       var s = e.$board.querySelectorAll("game-row")[e.rowIndex - 1];
@@ -1217,7 +1217,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
                           r = s.disabled;
                       switch (t) {
                           case "hard-mode":
-                              return void(r ? e.addToast("Si può attivare 'il gioco si fa duro' solo all'inizio di una partita", 1500, !0) : (e.hardMode = o, ja({
+                              return void(r ? e.addToast("Si puÃ² attivare 'il gioco si fa duro' solo all'inizio di una partita", 1500, !0) : (e.hardMode = o, ja({
                                   hardMode: o
                               })))
                       }
@@ -1293,7 +1293,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
   var ls = [
           ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
           ["-", "a", "s", "d", "f", "g", "h", "j", "k", "l", "-"],
-          ["↵", "z", "x", "c", "v", "b", "n", "m", "←"]
+          ["âµ", "z", "x", "c", "v", "b", "n", "m", "â"]
       ],
       ds = function(e) {
           n(t, e);
@@ -1342,12 +1342,12 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
                       var s = document.createElement("div");
                       s.classList.add("row"), a.forEach((function(e) {
                           var a;
-                          if (e >= "a" && e <= "z" || "←" === e || "↵" === e) {
-                              if ((a = ns.content.cloneNode(!0).firstElementChild).dataset.key = e, a.textContent = e, "←" === e) {
+                          if (e >= "a" && e <= "z" || "â" === e || "âµ" === e) {
+                              if ((a = ns.content.cloneNode(!0).firstElementChild).dataset.key = e, a.textContent = e, "â" === e) {
                                   var t = document.createElement("game-icon");
                                   t.setAttribute("icon", "backspace"), a.textContent = "", a.appendChild(t), a.classList.add("one-and-a-half")
                               }
-                              "↵" == e && (a.textContent = "invio", a.classList.add("one-and-a-half"))
+                              "âµ" == e && (a.textContent = "invio", a.classList.add("one-and-a-half"))
                           } else(a = is.content.cloneNode(!0).firstElementChild).classList.add(1 === e.length ? "half" : "one");
                           s.appendChild(a)
                       })), e.$keyboard.appendChild(s)
@@ -1443,17 +1443,17 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
                                       switch (e) {
                                           case Ia:
                                               a = function(e) {
-                                                  return e ? "🟧" : "🟩"
+                                                  return e ? "ð§" : "ð©"
                                               }(i);
                                               break;
                                           case Ta:
                                               a = function(e) {
-                                                  return e ? "🟦" : "🟨"
+                                                  return e ? "ð¦" : "ð¨"
                                               }(i);
                                               break;
                                           case Ca:
                                               a = function(e) {
-                                                  return e ? "⬛" : "⬜"
+                                                  return e ? "â¬" : "â¬"
                                               }(n)
                                       }
                                       d += a
@@ -1514,7 +1514,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
   }(c(HTMLElement));
   customElements.define("game-switch", bs);
   var fs = document.createElement("template");
-  fs.innerHTML = '\n  <style>\n  .instructions {\n    font-size: 14px;\n    color: var(--color-tone-1)\n  }\n\n  .examples {\n    border-bottom: 1px solid var(--color-tone-4);\n    border-top: 1px solid var(--color-tone-4);\n  }\n\n  .example {\n    margin-top: 24px;\n    margin-bottom: 24px;\n  }\n\n  game-tile {\n    width: 40px;\n    height: 40px;\n  }\n\n  :host([page]) section {\n    padding: 16px;\n    padding-top: 0px;\n  }\n\n  </style>\n  <section>\n    <div class="instructions">\n      <p>Indovina delle <strong>Wordello</strong> di 5 lettere in 6 tentativi.</p>\n     <p>Wordello si basa sulle parole di <a href="https://quizlet.com/class/26569774/materials" target="_blank">questo Quizlet</a></p>\n      <p>Dopo ogni tentativo, i colori delle tessere cambieranno per mostrarti quanto vicino sei andato ad indovinare la parola.</p>\n      <div class="examples">\n        <div class="example">\n          <div class="row">\n            <game-tile letter="b" evaluation="correct" reveal></game-tile>\n            <game-tile letter="a"></game-tile>\n            <game-tile letter="g"></game-tile>\n            <game-tile letter="n"></game-tile>\n            <game-tile letter="o"></game-tile>\n          </div>\n          <p>La lettera <strong>B</strong> è nella parola ed è nel posto giusto.</p>\n        </div>\n        <div class="example">\n          <div class="row">\n            <game-tile letter="p"></game-tile>\n            <game-tile letter="o"></game-tile>\n            <game-tile letter="r" evaluation="present" reveal></game-tile>\n            <game-tile letter="t"></game-tile>\n            <game-tile letter="e"></game-tile>\n          </div>\n          <p>La lettera <strong>R</strong> è nella parola ma nel posto sbagliato.</p>\n        </div>\n        <div class="example">\n          <div class="row">\n            <game-tile letter="h"></game-tile>\n            <game-tile letter="a"></game-tile>\n            <game-tile letter="n" evaluation="absent" reveal></game-tile>\n            <game-tile letter="n" evaluation="absent" reveal></game-tile>\n            <game-tile letter="o"></game-tile>\n          </div>\n          <p>La lettera <strong>N</strong> non è nella parola.</p>\n        </div>\n      </div>\n      <p><strong>Un nuovo gioco di WORDELLO ogni giorno!<strong></p>\n    </div>\n  </section>\n';
+  fs.innerHTML = '\n  <style>\n  .instructions {\n    font-size: 14px;\n    color: var(--color-tone-1)\n  }\n\n  .examples {\n    border-bottom: 1px solid var(--color-tone-4);\n    border-top: 1px solid var(--color-tone-4);\n  }\n\n  .example {\n    margin-top: 24px;\n    margin-bottom: 24px;\n  }\n\n  game-tile {\n    width: 40px;\n    height: 40px;\n  }\n\n  :host([page]) section {\n    padding: 16px;\n    padding-top: 0px;\n  }\n\n  </style>\n  <section>\n    <div class="instructions">\n      <p>Indovina delle <strong>Wordello</strong> di 5 lettere in 6 tentativi.</p>\n     <p>Wordello si basa sulle parole di <a href="https://quizlet.com/class/26569774/materials" target="_blank">questo Quizlet</a></p>\n      <p>Dopo ogni tentativo, i colori delle tessere cambieranno per mostrarti quanto vicino sei andato ad indovinare la parola.</p>\n      <div class="examples">\n        <div class="example">\n          <div class="row">\n            <game-tile letter="b" evaluation="correct" reveal></game-tile>\n            <game-tile letter="a"></game-tile>\n            <game-tile letter="g"></game-tile>\n            <game-tile letter="n"></game-tile>\n            <game-tile letter="o"></game-tile>\n          </div>\n          <p>La lettera <strong>B</strong> Ã¨ nella parola ed Ã¨ nel posto giusto.</p>\n        </div>\n        <div class="example">\n          <div class="row">\n            <game-tile letter="p"></game-tile>\n            <game-tile letter="o"></game-tile>\n            <game-tile letter="r" evaluation="present" reveal></game-tile>\n            <game-tile letter="t"></game-tile>\n            <game-tile letter="e"></game-tile>\n          </div>\n          <p>La lettera <strong>R</strong> Ã¨ nella parola ma nel posto sbagliato.</p>\n        </div>\n        <div class="example">\n          <div class="row">\n            <game-tile letter="h"></game-tile>\n            <game-tile letter="a"></game-tile>\n            <game-tile letter="n" evaluation="absent" reveal></game-tile>\n            <game-tile letter="n" evaluation="absent" reveal></game-tile>\n            <game-tile letter="o"></game-tile>\n          </div>\n          <p>La lettera <strong>N</strong> non Ã¨ nella parola.</p>\n        </div>\n      </div>\n      <p><strong>Un nuovo gioco di WORDELLO ogni giorno!<strong></p>\n    </div>\n  </section>\n';
   var ks = function(e) {
       n(t, e);
       var a = h(t);
