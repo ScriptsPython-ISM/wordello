@@ -325,13 +325,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
               s(this, t), r(p(e = a.call(this)), "isDarkTheme", !1), r(p(e), "isColorBlindTheme", !1), e.attachShadow({
                   mode: "open"
               });
-              var o = window.localStorage.getItem(j);
-                if (o === null) {
-                    o = true;
-                    window.localStorage.setItem(j, JSON.stringify(true));
-                } else {
-                    o = JSON.parse(o);
-                }
+              var o = JSON.parse(window.localStorage.getItem(j));
                   n = window.matchMedia("(prefers-color-scheme: dark)").matches;
                   i = JSON.parse(window.localStorage.getItem(S));
               return !0 === o || !1 === o ? e.setDarkTheme(o) : n && e.setDarkTheme(!0), !0 !== i && !1 !== i || e.setColorBlindTheme(i), e
