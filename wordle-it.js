@@ -1044,7 +1044,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
   var Qa = "IN_PROGRESS",
       Za = "WIN",
       es = "FAIL",
-      as = ["Genius", "Magnificent", "Impressive", "Splendid", "Great", "Phew"],
+      as = ["Genio!!!", "Magnifico", "Notevole", "Ottimo", "Non male", "Daje!"],
       ss = function(e) {
           n(t, e);
           var a = h(t);
@@ -1203,7 +1203,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
                   }
                   this.$game.addEventListener("game-key-press", (function(a) {
                       var s = a.detail.key;
-                      "â" === s || "Backspace" === s ? e.removeLetter() : "âµ" === s || "Enter" === s ? e.submitGuess() : Ga.includes(s.toLowerCase()) && e.addLetter(s.toLowerCase())
+                      "â†" === s || "Backspace" === s ? e.removeLetter() : "â†µ" === s || "Enter" === s ? e.submitGuess() : Ga.includes(s.toLowerCase()) && e.addLetter(s.toLowerCase())
                   })), this.$game.addEventListener("game-last-tile-revealed-in-row", (function(a) {
                       e.$keyboard.letterEvaluations = e.letterEvaluations, e.rowIndex < 6 && (e.canInput = !0);
                       var s = e.$board.querySelectorAll("game-row")[e.rowIndex - 1];
@@ -1293,7 +1293,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
   var ls = [
           ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
           ["-", "a", "s", "d", "f", "g", "h", "j", "k", "l", "-"],
-          ["âµ", "z", "x", "c", "v", "b", "n", "m", "â"]
+          ["â†µ", "z", "x", "c", "v", "b", "n", "m", "â†"]
       ],
       ds = function(e) {
           n(t, e);
@@ -1342,12 +1342,12 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
                       var s = document.createElement("div");
                       s.classList.add("row"), a.forEach((function(e) {
                           var a;
-                          if (e >= "a" && e <= "z" || "â" === e || "âµ" === e) {
-                              if ((a = ns.content.cloneNode(!0).firstElementChild).dataset.key = e, a.textContent = e, "â" === e) {
+                          if (e >= "a" && e <= "z" || "â†" === e || "â†µ" === e) {
+                              if ((a = ns.content.cloneNode(!0).firstElementChild).dataset.key = e, a.textContent = e, "â†" === e) {
                                   var t = document.createElement("game-icon");
                                   t.setAttribute("icon", "backspace"), a.textContent = "", a.appendChild(t), a.classList.add("one-and-a-half")
                               }
-                              "âµ" == e && (a.textContent = "invio", a.classList.add("one-and-a-half"))
+                              "â†µ" == e && (a.textContent = "invio", a.classList.add("one-and-a-half"))
                           } else(a = is.content.cloneNode(!0).firstElementChild).classList.add(1 === e.length ? "half" : "one");
                           s.appendChild(a)
                       })), e.$keyboard.appendChild(s)
@@ -1443,17 +1443,17 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
                                       switch (e) {
                                           case Ia:
                                               a = function(e) {
-                                                  return e ? "ð§" : "ð©"
+                                                  return e ? "ðŸŸ§" : "ðŸŸ©"
                                               }(i);
                                               break;
                                           case Ta:
                                               a = function(e) {
-                                                  return e ? "ð¦" : "ð¨"
+                                                  return e ? "ðŸŸ¦" : "ðŸŸ¨"
                                               }(i);
                                               break;
                                           case Ca:
                                               a = function(e) {
-                                                  return e ? "â¬" : "â¬"
+                                                  return e ? "â¬›" : "â¬œ"
                                               }(n)
                                       }
                                       d += a
