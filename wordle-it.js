@@ -1044,7 +1044,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
   var Qa = "IN_PROGRESS",
       Za = "WIN",
       es = "FAIL",
-      as = ["Genio!!!", "Magnifico", "Notevole", "Ottimo", "Non male", "Daje!"],
+      as = ["Genius", "Magnificent", "Impressive", "Splendid", "Great", "Phew"],
       ss = function(e) {
           n(t, e);
           var a = h(t);
