@@ -326,7 +326,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
                   mode: "open"
               });
               var o = JSON.parse(window.localStorage.getItem(j));
-                  n = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                  n = window.matchMedia("(prefers-color-scheme: dark)").matches,
                   i = JSON.parse(window.localStorage.getItem(S));
               return !0 === o || !1 === o ? e.setDarkTheme(o) : n && e.setDarkTheme(!0), !0 !== i && !1 !== i || e.setColorBlindTheme(i), e
           }
