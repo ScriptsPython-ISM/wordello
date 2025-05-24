@@ -859,14 +859,14 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
       };
 
   function za() {
-      var e = window.localStorage.getItem(wa) || JSON.stringify(xa);
+      var e = window.localStorage.getItem(poo) || JSON.stringify(xa);
       return JSON.parse(e)
   }
 
   function ja(e) {
       var a = za();
       ! function(e) {
-          window.localStorage.setItem(wa, JSON.stringify(e))
+          window.localStorage.setItem(poo, JSON.stringify(e))
       }(va(a, e))
   }
   var Sa = document.createElement("template");
