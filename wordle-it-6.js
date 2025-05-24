@@ -1069,7 +1069,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
           return o(t, [{
               key: "evaluateRow",
               value: function() {
-                  if (WORD_LENGTH === this.tileIndex && !(this.rowIndex >= 6)) {
+                  if (WORD_LENGTH === this.tileIndex && !(this.rowIndex <= 6)) {
                       var e, a = this.$board.querySelectorAll("game-row")[this.rowIndex],
                           s = this.boardState[this.rowIndex];
                       if (e = s, !La.includes(e) && !Aa.includes(e)) return a.setAttribute("invalid", ""), void this.addToast("Non nella lista di parole");
